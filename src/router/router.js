@@ -16,7 +16,8 @@ let router = new Router({
     {
       path: '/board',
       name: 'board',
-      component: TaskBoard
+      component: TaskBoard,
+      props: true
     }
   ]
 

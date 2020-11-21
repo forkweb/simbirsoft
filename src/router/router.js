@@ -11,16 +11,17 @@ let router = new Router({
     {
       path: '/',
       name: 'login',
+      meta: {layout: "empty"},
       component: LogIn
     },
     {
       path: '/board',
       name: 'board',
+      meta: {layout: "main"},
       component: TaskBoard,
       props: true
     }
   ]
-
 
 })
 

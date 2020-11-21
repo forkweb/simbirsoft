@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router/router'
 import store from './store'
 import Vuelidate from 'vuelidate'
+import  'materialize-css/dist/js/materialize.min'
 
 import firebase from 'firebase/app'
 import 'firebase/auth'

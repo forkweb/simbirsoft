@@ -1,29 +1,30 @@
 <template>
   <div id="app">
-    <div class="content-board">
-      <router-view></router-view>
-    </div>
+    <component :is="layout">
+      <router-view/>
+    </component>
   </div>
 </template>
 
 <script>
-// import LogIn from './components/LogIn.vue'
-
+import EmptyLayout from '@/layouts/EmptyLayout'
+import MainLayout from '@/layouts/MainLayout'
 export default {
-  name: 'App',
-  // components: {
-  //   LogIn
-  // }
+  computed: {
+    layout() {
+      return (this.$route.meta.layout || 'empty') + '-layout'
+    }
+  },
+  components: {
+    EmptyLayout, 
+    MainLayout
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+<style lang="scss">
+@import '~materialize-css/dist/css/materialize.min.css';
+@import 'assets/index.css';
+
 </style>

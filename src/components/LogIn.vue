@@ -38,10 +38,10 @@
         </button>
       </div>
 
-      <p class="center">
+      <!-- <p class="center">
         Нет аккаунта?
         <a href="/">Зарегистрироваться</a>
-      </p>
+      </p> -->
     </div>
   </form>
 </template>

@@ -9,19 +9,19 @@
 
         <div class="input-field">
           <textarea style="min-height: 150px" v-model="description" id="description" class="materialize-textarea"></textarea>
-          <label for="description">Description</label>
+          <label for="description">Описание</label>
           <span class="character-counter" style="float: right; font-size: 12px;">{{description.length}}/2048</span>
         </div>
 
         <input type="text" ref="datepicker">
 
         <div v-if="task.status !== 'completed'">
-          <button class="btn" type="submit" style="margin-right: 1rem;">Update</button>
-          <button class="btn blue" type="button" @click="completeTask">Complete task</button>
+          <button class="btn" type="submit" style="margin-right: 1rem;">Сохранить</button>
+          <button class="btn blue" type="button" @click="completeTask">Завершить задачу</button>
         </div>
       </form>
     </div>
-    <p v-else>Task not found</p>
+    <p v-else>Задача не найдена</p>
   </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
   mounted() {
     this.description = this.task.description
     this.chips = window.M.Chips.init(this.$refs.chips, {
-      placeholder: 'Task tags',
+      placeholder: 'Теги задачи',
       data: this.task.tags
     })
     this.date = window.M.Datepicker.init(this.$refs.datepicker, {

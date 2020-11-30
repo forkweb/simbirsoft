@@ -1,20 +1,20 @@
 <template>
   <div>
-    <h1>List</h1>
+    <h1>Список</h1>
 
     <div class="row">
       <div class="input-field col s6 ">
         <select ref="select" v-model="filter">
-          <option value="" disabled selected>Choose your option</option>
-          <option value="active">Active</option>
-          <option value="outdated">Outdated</option>
-          <option value="completed">Completed</option>
+          <option value="" disabled selected>Выбрать фильтр</option>
+          <option value="active">В процессе</option>
+          <option value="outdated">В архиве</option>
+          <option value="completed">Завершено</option>
         </select>
-        <label>Status filter</label>
+        <label>Фильтрr</label>
       </div>
     </div>
 
-    <button v-if="filter" class="btn btn-small red" @click="filter = null">Clear filter</button>
+    <button v-if="filter" class="btn btn-small red" @click="filter = null">Очистить фильтр</button>
 
     <hr>
 
@@ -22,11 +22,11 @@
       <thead>
       <tr>
         <th>#</th>
-        <th>Title</th>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Status</th>
-        <th>Open</th>
+        <th>Заголовок</th>
+        <th>Дата</th>
+        <th>Описание</th>
+        <th>Статус</th>
+        <th>Открыть</th>
       </tr>
       </thead>
       <tbody>
@@ -43,13 +43,13 @@
         <td>{{task.status}}</td>
         <td>
           <router-link tag="button" class="btn btn-small" :to="'/task/' + task.id">
-            Open
+            Открыть
           </router-link>
         </td>
       </tr>
       </tbody>
     </table>
-    <p v-else>No tasks</p>
+    <p v-else>Нет задач</p>
   </div>
 </template>
 

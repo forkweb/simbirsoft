@@ -73,7 +73,7 @@ export default {
 
       try {
         await this.$store.dispatch('login', formData);
-        this.$router.push('/board');
+        this.$router.push('/list');
       } catch (e) {
         console.log(e); 
       }

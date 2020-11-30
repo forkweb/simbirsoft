@@ -1,9 +1,6 @@
 <template>
   <nav class="navbar orange lighten-1">
     <div class="nav-wrapper">
-      <div class="navbar-left">
-        <span class="black-text">LOGO</span>
-      </div>
 
       <ul class="right hide-on-small-and-down">
         <li>
@@ -26,6 +23,23 @@
             </li>
           </ul>
         </li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <router-link
+          tag="li"
+          to="/create"
+          exact
+          active-class="active"
+        >
+          <a href="#">Создать задачу</a>
+        </router-link>
+        <router-link
+          tag="li"
+          to="/list"
+          active-class="active"
+        >
+          <a href="#">Список задач</a>
+        </router-link>
       </ul>
     </div>
   </nav>
